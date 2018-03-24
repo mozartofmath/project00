@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./scripts/scriptAdd.js"></script>
+        <style>
+            
+            #word{
+                font-size: 1em;
+                color: midnightblue;
+	            font-style: italic;
+	            font-family: 'Times New Roman', Times, serif;
+	            font-size: 120%;
+	            width: 400px;
+                border: 2px solid midnightblue;
+                border-radius: 4px;
+	            padding: 6px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            #word:focus {
+                border: 3px solid midnightblue;
+            }
+
+            #defn{
+                color: midnightblue;
+	            font-style: italic;
+	            font-family: 'Times New Roman', Times, serif;
+	            font-size: 120%;
+	            width: 400px;
+                height: 120px;
+                border: 2px solid midnightblue;
+                border-radius: 4px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            #defn:focus{
+                border: 3px solid midnightblue;
+            }
+            a{
+                font-weight:bold;
+                color:lightblue;
+                font-family: "Times New Roman", Times, serif;
+                
+                font-style: italic;
+                font-size: 1em;
+                text-decoration:none;
+                padding-right:10px;
+            }
+            a:hover{
+                color: midnightblue;
+            }
+            .label{
+                color:gold;
+				font-style:italic;
+				font-weight:bold;
+				font-variant:small-caps;
+				font-family: georgia;
+				font-size:120%;
+            }
+            input[type=text] {
+                border: 2px solid red;
+                border-radius: 4px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            #h{
+                color:gold;
+				font-style:italic;
+				font-weight:bold;
+				font-variant:small-caps;
+				font-family: georgia;
+				font-size:200%;
+                }
+            body{
+                border: 1px solid grey;
+                margin: 1% 20% 20% 20%;
+                background-color:grey;
+                padding:5% 5% 5% 10% ;
+                border-radius: 2px;
+            }
+            #list{
+                color:lightblue;
+                list-style-type:none;
+                display:none;
+                }
+            li:hover{
+                color:green;
+                background-color:grey;
+                cursor: pointer;
+                }
+            #p{
+                color:midnightblue;
+                font-family: "Times New Roman", Times, serif;
+                font-style: italic;
+                font-size: 1.2em;
+            }
+            button {
+                padding: 5px 25px 5px 25px;
+				background-color: gold;
+				border-radius: 2px;
+    			color: green;
+    			text-align: center;
+    			text-decoration: none;
+    			border-radius:4px;
+    			cursor: pointer;
+			}
+            #p2{font-weight:bold;}
+        </style>
+        
+    </head>
+    <body  onload="redirect()">
+        <p id="h">Add Word</p>
+        <a href="http://localhost:3000/">Dictionary</a>
+        <a href="http://localhost:3000/editWord">Edit Word</a>
+        <a href="http://localhost:3000/deleteWord">Delete Word</a><br>
+        <p class="label">Word:       </p><input id="word"><br>
+        <p class="label">Definition: </p><textarea id="defn"></textarea><br><br>
+        <button onclick="add()">ADD</button><br><br>
+        <div><p id="p"></p></div>
+
+    </body>
+</html>
